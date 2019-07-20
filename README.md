@@ -18,7 +18,8 @@ def say
   puts "Message: #{msg}, #{x}"
 end
 ```
-Can't access variable whose inside a function scope inside a parent scope
+
+Can't access variable defined inside a function scope in a parent scope.
 
 ```
 msg = "Foo"
