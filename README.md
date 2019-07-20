@@ -26,7 +26,7 @@ msg = "Foo"
 puts "PRINT: #{x}"
 
 def say
-  ..
+  x = 1
 end
 ```
 
@@ -41,10 +41,23 @@ The variable msg is a free variable defined in the parent scope and used inside 
 
 Ex: String, Integer and Lambda.
 
+## Proc
+
+```
+module_of_two = proc { |x| x % 2 == 0 }
+
+#=> #<Proc:0x00007ffa8186d638@(irb):3> 
+
+module_of_two.call(2) #=> true
+module_of_two.call(3) #=> false
+```
+
 ## Lambda
 
 ```
 module_of_two = lambda { |x| x % 2 == 0 }
+
+#=> #<Proc:0x00007ffa81099d58@(irb):6 (lambda)>
 
 module_of_two.call(2) #=> true
 module_of_two.call(3) #=> false
